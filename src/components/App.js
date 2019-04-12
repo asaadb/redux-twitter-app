@@ -10,7 +10,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        starter code
         {this.props.loading === true ? null : <Dashboard />}
       </div>
     );
