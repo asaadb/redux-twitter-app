@@ -6,14 +6,19 @@ import {
   TiHeartOutline,
   TiHeartFullOutline
 } from "react-icons/ti/index";
+import { handleToggleTweet } from '../actions/tweets'
+
 class Tweet extends Component {
   toParent = (e, id) => {
     e.preventDefault();
     // TODO: Redirect to parent Tweet
   };
-  handleLike = e => {
+  handleLike = (e) => {
     e.preventDefault();
-    // TODO: Handle like tweet
+    const { hasLiked, id } = this.props.tweet
+    const { dispatch, authedUser } = this.props
+    console.log('Authed', authedUser);
+    dispatch(handleToggleTweet({id, authedUser, hasLiked}))
   };
   render() {
     console.log("Tweet props", this.props);
