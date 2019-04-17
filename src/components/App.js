@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import LoadingBar from "react-redux-loading";
 import NewTweet from "./NewTweet";
 import Nav from "./Nav";
+import TweetPage from './TweetPage'
 
 class App extends Component {
   componentDidMount() {
@@ -23,7 +24,7 @@ class App extends Component {
               <Switch>
                 <Route path="/" exact component={Dashboard} />
                 <Route path="/new" exact component={NewTweet} />
-                <Route path="/tweet/:id" exact component={NewTweet} />
+                <Route path="/tweet/:id" exact component={TweetPage} />
               </Switch>
             )}
           </div>
