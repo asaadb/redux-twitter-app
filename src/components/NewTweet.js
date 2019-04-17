@@ -27,7 +27,7 @@ class NewTweet extends Component {
 
     this.setState(() => ({
       text: '',
-      toHome: id ? false : true
+      toHome: id ? false : true 
     }))
   }
   render() {
