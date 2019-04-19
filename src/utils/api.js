@@ -22,3 +22,15 @@ export function saveLikeToggle (info) {
 export function saveTweet (info) {
   return _saveTweet(info)
 }
+
+export const isAuth = {
+  isAuthenticated: false,
+  authenticate(cb) {
+    this.isAuthenticated = true
+    setTimeout(cb, 100) // fake async
+  },
+  signout(cb) {
+    this.isAuthenticated = false
+    setTimeout(cb, 100) // fake async
+  }
+}
