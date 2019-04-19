@@ -27,14 +27,14 @@ class NewTweet extends Component {
 
     this.setState(() => ({
       text: '',
-      toHome: id ? false : true 
+      toHome: id ? false : true
     }))
   }
   render() {
     const { text, toHome } = this.state
 
     if (toHome === true) {
-      return  <Redirect to="/" />
+      return  <Redirect to="/home" />
     }
     const tweetLeft = 280 - text.length
 
